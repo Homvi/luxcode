@@ -1,8 +1,10 @@
+import Landing from "./pages/Landing";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <div className="p-5 bg-gradient-to-br from-neutral-700 to-neutral-900 h-screen">
+      <Landing />
+    </div>
   );
 }
 
