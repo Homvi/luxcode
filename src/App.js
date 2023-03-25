@@ -15,7 +15,7 @@ function App() {
         <meta name="msapplication-TileColor" content="#3d3d3d"/>
         <meta name="theme-color" content="#000000"/>
       </Helmet>
-      <div className="p-5 bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900 h-screen">
+      <div className="p-5 bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900 min-h-screen">
         <Landing />
       </div>
     </>
