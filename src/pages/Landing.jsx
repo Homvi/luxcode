@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../components/Button";
 import Description from "../components/Description";
 import Heading from "../components/Heading";
 import Navbar from "../components/Navbar";
@@ -11,7 +12,7 @@ const data = {
 
 const Landing = () => {
   return (
-    <div className="">
+    <div className="inter">
       <Navbar />
       <div className="mt-12">
         <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
@@ -21,6 +22,12 @@ const Landing = () => {
         <Heading content="gyönyörű weboldalak " />
       </div>
       <Description content={data.description} />
+      <div className="my-10">
+        <div className="my-2">
+        <Button content="Fedezze fel szolgáltatásainkat"/>
+        </div>
+        <Button content="Kérjen ajánlatot most"/>
+      </div>
       <Subheading content="Elégedett ügyfelek mondták rólunk" />
     </div>
   );
