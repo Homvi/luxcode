@@ -34,10 +34,19 @@ const Landing = () => {
         <Button content="Kérjen ajánlatot most" />
       </div>
       <Subheading content="Elégedett ügyfelek mondták rólunk" />
-      <div className="flex">
-      {data.testemonials.map((content, id) => (
-        <TestemonialCard content={content} />
-      ))}
+      <div className="flex flex-col xl:flex-row">
+        <div className="flex">
+          {data.testemonials.map((content, id) => (
+            <TestemonialCard content={content} />
+          ))}
+        </div>
+
+        <div className="max-w-sm flex justify-center items-center xl:p-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere
+          fugiat ex numquam nihil iusto culpa doloremque corrupti delectus
+          dolores blanditiis quos natus. Dolorum quam non aperiam enim eum
+          provident.
+        </div>
       </div>
     </div>
   );
