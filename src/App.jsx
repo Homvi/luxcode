@@ -7,6 +7,7 @@ function App() {
   const [progress, setProgress] = useState(0);
 
   const [arrayIndex, setArrayIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [progressArray, setProgressArray] = useState([0, 81, 87, 90]);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
       setImageLoading(false);
     }, 2000);
   };
+
 
   return (
     <>
