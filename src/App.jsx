@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 function App() {
   const [imageLoading, setImageLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
 
   const [arrayIndex, setArrayIndex] = useState(0);
   // eslint-disable-next-line no-unused-vars
   const [progressArray, setProgressArray] = useState([0, 81, 87, 90]);
 
-  
   useEffect(() => {
     const interval = setInterval(() => {
-      if (arrayIndex < progressArray.length) {
+      if (arrayIndex < progressArray.length && loadingIsNecessary) {
         setProgress(progressArray[arrayIndex]);
         setArrayIndex(arrayIndex + 1);
       } else {
@@ -22,17 +22,15 @@ function App() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [arrayIndex, progressArray]);
+  }, [arrayIndex, progressArray, loadingIsNecessary]);
 
   const handleLoaded = () => {
-    if (progress === 90) {
-      setProgress(100);
-    }
+    setLoadingIsNecessary(false);
+    setProgress(100);
     setTimeout(() => {
       setImageLoading(false);
     }, 2000);
   };
-
 
   return (
     <>
