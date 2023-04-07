@@ -7,8 +7,10 @@ function App() {
   const [progress, setProgress] = useState(0);
 
   const [arrayIndex, setArrayIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [progressArray, setProgressArray] = useState([0, 81, 87, 90]);
 
+  
   useEffect(() => {
     const interval = setInterval(() => {
       if (arrayIndex < progressArray.length) {
@@ -23,7 +25,7 @@ function App() {
   }, [arrayIndex, progressArray]);
 
   const handleLoaded = () => {
-    if (progressArray) {
+    if (progress === 90) {
       setProgress(100);
     }
     setTimeout(() => {
