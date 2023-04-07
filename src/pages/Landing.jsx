@@ -5,6 +5,7 @@ import Heading from "../components/Heading";
 import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import TestemonialCard from "../components/TestemonialCard";
+import Loading from "../components/Loading";
 
 const data = {
   description:
@@ -18,6 +19,7 @@ const data = {
 const Landing = () => {
   return (
     <div className="inter">
+      <Loading />
       <Navbar />
       <div className="mt-12">
         <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
@@ -41,7 +43,11 @@ const Landing = () => {
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
           {data.testemonials.map((content, id) => (
-            <TestemonialCard content={content} key={`testemonial-card-${id}`} active={ id === 0 ? true : false }/>
+            <TestemonialCard
+              content={content}
+              key={`testemonial-card-${id}`}
+              active={id === 0 ? true : false}
+            />
           ))}
         </div>
 
