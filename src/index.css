@@ -14,3 +14,7 @@
     font-weight: 400;
 }
 
+.svg-bcg {
+    background-image: url("assets/bcg-svg.svg");
+}
+
