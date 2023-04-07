@@ -41,7 +41,7 @@ const Landing = () => {
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
           {data.testemonials.map((content, id) => (
-            <TestemonialCard content={content} key={`testemonial-card-${id}`} />
+            <TestemonialCard content={content} key={`testemonial-card-${id}`} active={ id === 0 ? true : false }/>
           ))}
         </div>
 
