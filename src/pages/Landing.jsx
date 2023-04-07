@@ -26,26 +26,29 @@ const Landing = () => {
         <Heading content="Egyedi tervezésű, " />
         <Heading content="gyönyörű weboldalak " />
       </div>
-      <Description content={data.description} />
-      <div className="my-10">
-        <div className="my-2">
+      <div className="mb-16">
+        <Description content={data.description} />
+      </div>
+      <div className="my-10 mb-24">
+        <div className="my-5">
           <Button content="Fedezze fel szolgáltatásainkat" />
         </div>
         <Button content="Kérjen ajánlatot most" />
       </div>
-      <Subheading content="Elégedett ügyfelek mondták rólunk" />
+      <div className="mb-3">
+        <Subheading content="Elégedett ügyfelek mondták rólunk" />
+      </div>
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
           {data.testemonials.map((content, id) => (
-            <TestemonialCard content={content} />
+            <TestemonialCard content={content} key={`testemonial-card-${id}`} />
           ))}
         </div>
 
-        <div className="max-w-sm flex justify-center items-center xl:p-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, facere
-          fugiat ex numquam nihil iusto culpa doloremque corrupti delectus
-          dolores blanditiis quos natus. Dolorum quam non aperiam enim eum
-          provident.
+        <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-orange-100 via-orange-200 to-orange-100  xl:p-4">
+          A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat
+          nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és
+          hatékony online jelenlétet kialakítani.
         </div>
       </div>
     </div>
