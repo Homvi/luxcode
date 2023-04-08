@@ -13,7 +13,7 @@ const Services = () => {
   };
 
   return (
-    <div className="inter">
+    <div className="inter p-8">
       <Navbar />
       <div className="mt-12">
         <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
