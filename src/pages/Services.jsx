@@ -9,6 +9,7 @@ const Services = () => {
   const data = {
     description:
       "Fedezze fel a LuxCode kreatív és hatékony webfejlesztési szolgáltatásait, amelyek segítenek vállalkozásának növekedésében és sikerességében az online világban.",
+      moreInfo:"Amennyiben a fentiekben felsorolt szolgáltatásoktól eltérő igényük merülne fel, kérjük, ne habozzanak jelezni felénk. Kattintsanak az alábbi gombra, és használják a webes kalkulátorunkat az igényeik pontosabb meghatározásához. "
   };
 
   return (
@@ -33,6 +34,10 @@ const Services = () => {
         <div className="h-96 w-full  sm:w-72 mr-2 bg-black mt-2">price card component</div>
         <div className="h-96 w-full sm:w-72 mr-2 bg-black mt-2">price card component</div>
       </div>
+      <div className="mb-16">
+        <Description content={data.moreInfo} />
+      </div>
+      <Button content="Kérjen ajánlatot most" />
     </div>
   );
 };
