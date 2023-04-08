@@ -83,7 +83,7 @@ const Services = () => {
       <div className="mt-12">
         <Subheading content="Kiemelt szolgáltatásaink" />
       </div>
-      <div className="flex flex-col sm:items-stretch mb-5 sm:flex-row">
+      <div className="flex flex-col items-stretch mb-5 md:flex-row">
         <PriceCard data={data.priceCardData.cardOne} />
         <PriceCard data={data.priceCardData.cardTwo} />
         <PriceCard data={data.priceCardData.cardThree} />
