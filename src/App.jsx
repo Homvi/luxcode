@@ -1,6 +1,8 @@
 import Landing from "./pages/Landing";
 import pc from "./assets/pc.png";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Services from "./pages/Services";
 
 function App() {
   const [imageLoading, setImageLoading] = useState(true);
@@ -41,7 +43,13 @@ function App() {
           onLoad={handleLoaded}
           className="absolute right-0 bottom-0 h-[90%] hidden lg:block"
         />
-        <Landing loading={imageLoading} progress={progress} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Landing loading={imageLoading} progress={progress} />}
+          />
+          <Route path="/services" element={<Services />} />
+        </Routes>
       </div>
     </>
   );

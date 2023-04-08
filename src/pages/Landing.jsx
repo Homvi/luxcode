@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import TestemonialCard from "../components/TestemonialCard";
 import Loading from "../components/Loading";
+import { Link } from "react-router-dom";
 
 const data = {
   description:
@@ -16,10 +17,10 @@ const data = {
   ],
 };
 
-const Landing = ({loading, progress}) => {
+const Landing = ({ loading, progress }) => {
   return (
     <div className="inter">
-      {loading && <Loading progress={progress}/>}
+      {loading && <Loading progress={progress} />}
       <Navbar />
       <div className="mt-12">
         <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
@@ -33,7 +34,9 @@ const Landing = ({loading, progress}) => {
       </div>
       <div className="my-10 mb-24">
         <div className="my-5">
-          <Button content="Fedezze fel szolgáltatásainkat" />
+          <Link to="/services">
+            <Button content="Fedezze fel szolgáltatásainkat" />
+          </Link>
         </div>
         <Button content="Kérjen ajánlatot most" />
       </div>
@@ -56,7 +59,6 @@ const Landing = ({loading, progress}) => {
           hatékony online jelenlétet kialakítani.
         </div>
       </div>
-     
     </div>
   );
 };
