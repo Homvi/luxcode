@@ -1,13 +1,47 @@
 import React from "react";
 
 const Form = () => {
+
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    // Get form data
+    const formData = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      tel: event.target.tel.value,
+      company: event.target.company.value,
+      services: event.target.services.value,
+      purpose: event.target.purpose.value,
+      ideas: event.target.ideas.value,
+      custom: event.target.custom.value,
+    };
+  
+    try {
+      const response = await fetch('http://localhost:3001/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+      console.log(data);
+  
+      // Redirect to your custom success page
+      // window.location.replace('/success');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Display an error message or handle the error as appropriate
+    }
+  };
+
   return (
     <form
       className="w-full"
       name="quote"
       method="post"
-      data-netlify="true"
-      action="/success"
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
