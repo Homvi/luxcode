@@ -6,7 +6,7 @@ const Form = () => {
       {/* név */}
       <div className="mb-4">
         <input
-          className="w-full text-[13px] px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+          className="w-full text-[13px] text-white px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
           type="text"
           id="name"
           name="name"
@@ -22,7 +22,7 @@ const Form = () => {
       {/* email */}
       <div className="mb-4">
         <input
-          className="w-full text-[13px] px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+          className="w-full text-[13px] text-white px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
           type="email"
           id="email"
           name="email"
@@ -40,7 +40,7 @@ const Form = () => {
       {/* Telefonszám */}
       <div className="mb-4">
         <input
-          className="w-full text-[13px] px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+          className="w-full text-[13px] text-white px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
           type="tel"
           id="tel"
           name="tel"
@@ -57,7 +57,7 @@ const Form = () => {
       {/* Cég neve */}
       <div className="mb-4">
         <input
-          className="w-full text-[13px] px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+          className="w-full text-[13px] text-white px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
           type="text"
           id="company"
           name="company"
