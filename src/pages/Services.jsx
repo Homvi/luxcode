@@ -98,7 +98,7 @@ const Services = () => {
         <Description content={data.moreInfo} />
       </div>
       <div className="mb-28">
-        <Link to="quote">
+        <Link to="/quote">
           <Button content="Kérjen ajánlatot most" />
         </Link>
       </div>
