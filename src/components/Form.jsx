@@ -2,7 +2,14 @@ import React from "react";
 
 const Form = () => {
   return (
-    <form className="w-full" action="/success" name="quote" method="post">
+    <form
+      className="w-full"
+      action="/success"
+      name="quote"
+      method="post"
+      data-netlify="true"
+      onSubmit="submit"
+    >
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
       <div className="mb-4">
