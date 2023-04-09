@@ -1,11 +1,10 @@
 import React from "react";
 
 const Form = () => {
-
-  
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+    console.log("Submit happend");
+
     // Get form data
     const formData = {
       name: event.target.name.value,
@@ -17,32 +16,29 @@ const Form = () => {
       ideas: event.target.ideas.value,
       custom: event.target.custom.value,
     };
-  
+
+    console.log(formData);
+
     try {
-      const response = await fetch('http://localhost:3001/submit-form', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("https://email-app-adakin.herokuapp.com/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json();
       console.log(data);
-  
+
       // Redirect to your custom success page
       // window.location.replace('/success');
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       // Display an error message or handle the error as appropriate
     }
   };
 
   return (
-    <form
-      className="w-full"
-      name="quote"
-      method="post"
-      onSubmit={handleSubmit}
-    >
+    <form className="w-full" name="quote" method="post" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
       <div className="mb-4">
