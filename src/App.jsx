@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/services" element={<Services />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/success" element={<Success />} />
+          <Route path="/successpage" element={<Success />} />
         </Routes>
       </div>
     </>
