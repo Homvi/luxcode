@@ -20,7 +20,6 @@ const data = {
 };
 
 const Landing = () => {
-
   const [imageLoading, setImageLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
@@ -50,57 +49,57 @@ const Landing = () => {
     }, 2000);
   };
 
-
   return (
     <div className="inter relative">
       <img
-          src={pc}
-          alt="pc"
-          onLoad={handleLoaded}
-          className="absolute right-0 bottom-0 h-[90%] hidden lg:block"
-        />
-       <div className="p-8">
-
-      {imageLoading && <Loading progress={progress} />}
-      <Navbar />
-      <div className="mt-12">
-        <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
-      </div>
-      <div className="mb-5">
-        <Heading content="Egyedi tervezésű, " />
-        <Heading content="gyönyörű weboldalak " />
-      </div>
-      <div className="mb-16">
-        <Description content={data.description} />
-      </div>
-      <div className="my-10 mb-24">
-        <div className="my-5">
-          <Link to="/services">
-            <Button content="Fedezze fel szolgáltatásainkat" />
+        src={pc}
+        alt="pc"
+        onLoad={handleLoaded}
+        className="absolute right-0 bottom-0 h-[90%] hidden lg:block"
+      />
+      <div className="p-8">
+        {imageLoading && <Loading progress={progress} />}
+        <Navbar />
+        <div className="mt-12">
+          <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
+        </div>
+        <div className="mb-5">
+          <Heading content="Egyedi tervezésű, " />
+          <Heading content="gyönyörű weboldalak " />
+        </div>
+        <div className="mb-16">
+          <Description content={data.description} />
+        </div>
+        <div className="my-10 mb-24">
+          <div className="my-5">
+            <Link to="/services">
+              <Button content="Fedezze fel szolgáltatásainkat" />
+            </Link>
+          </div>
+          <Link to="/quote">
+            <Button content="Kérjen ajánlatot most" />
           </Link>
         </div>
-        <Button content="Kérjen ajánlatot most" />
-      </div>
-      <div className="mb-3">
-        <Subheading content="Elégedett ügyfelek mondták rólunk" />
-      </div>
-      <div className="flex flex-col xl:flex-row">
-        <div className="flex">
-          {data.testemonials.map((content, id) => (
-            <TestemonialCard
-              content={content}
-              key={`testemonial-card-${id}`}
-              active={id === 0 ? true : false}
-            />
-          ))}
+        <div className="mb-3">
+          <Subheading content="Elégedett ügyfelek mondták rólunk" />
         </div>
-        <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
-          A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat
-          nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és
-          hatékony online jelenlétet kialakítani.
+        <div className="flex flex-col xl:flex-row">
+          <div className="flex">
+            {data.testemonials.map((content, id) => (
+              <TestemonialCard
+                content={content}
+                key={`testemonial-card-${id}`}
+                active={id === 0 ? true : false}
+              />
+            ))}
+          </div>
+          <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
+            A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat
+            nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és
+            hatékony online jelenlétet kialakítani.
+          </div>
         </div>
       </div>
-       </div>
     </div>
   );
 };

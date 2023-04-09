@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import PriceCard from "../components/PriceCard";
 import TestemonialCard from "../components/TestemonialCard";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const data = {
@@ -97,7 +98,9 @@ const Services = () => {
         <Description content={data.moreInfo} />
       </div>
       <div className="mb-28">
-        <Button content="Kérjen ajánlatot most" />
+        <Link to="quote">
+          <Button content="Kérjen ajánlatot most" />
+        </Link>
       </div>
       <div className="mb-3">
         <Subheading content="Elégedett ügyfelek mondták rólunk" />
