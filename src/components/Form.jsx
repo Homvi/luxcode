@@ -7,9 +7,7 @@ const Form = () => {
       name="quote"
       method="post"
       data-netlify="true"
-      onSubmit="submit"
-      data-netlify-success="/success"
-      action="/success.html"
+      action="/success"
     >
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
