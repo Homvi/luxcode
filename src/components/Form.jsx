@@ -30,7 +30,7 @@ const Form = () => {
         />
         <label
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
-          htmlFor="name"
+          htmlFor="email"
         >
           Email
         </label>
@@ -48,7 +48,7 @@ const Form = () => {
         />
         <label
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
-          htmlFor="name"
+          htmlFor="tel"
         >
           Telefonszám
         </label>
@@ -65,24 +65,101 @@ const Form = () => {
         />
         <label
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
-          htmlFor="name"
+          htmlFor="company"
         >
           Cég neve (opcionális)
         </label>
       </div>
       {/* eddig */}
-
-      <button className="w-full flex justify-center" type="submit">
-        <div className="flex justify-center items-center w-full mt-5">
-          <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
-            <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
-              <div className="text-[10px] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#DBCFB8] to-[#837C67]">
-                Ajánlat kérése
+      {/* Ajánlatok közül select */}
+      <div className="mb-4">
+        <select
+          name="services"
+          id="services"
+          className="w-full  px-0 text-[13px] bold text-[#B8A080]  py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+        >
+          <option className=" bg-[#141514]/95 " value="custom">
+            Egyedi
+          </option>
+          <option className=" bg-[#141514]/95 " value="wedding">
+            Esküvői
+          </option>
+          <option className=" bg-[#141514]/95 " value="restaurant">
+            Gasztro
+          </option>
+          <option className=" bg-[#141514]/95 " value="business">
+            Üzleti
+          </option>
+        </select>
+        <label
+          className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
+          htmlFor="services"
+        >
+          Válaszzon az ajánlatok közül
+        </label>
+      </div>
+      {/* eddig */}
+      {/* Cél area */}
+      <div className="mb-4">
+        <textarea
+          id="purpose"
+          name="purpose"
+          rows="4"
+          className="w-full text-[13px] px-1 py-1 text-white text-sm border rounded-md border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+        ></textarea>
+        <label
+          className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
+          htmlFor="purpose"
+        >
+          Weboldal célja
+        </label>
+      </div>
+      {/* eddig */}
+      {/* Elképzelések area */}
+      <div className="mb-4">
+        <textarea
+          id="ideas"
+          name="ideas"
+          rows="4"
+          className="w-full text-[13px] px-1 py-1 text-white text-sm border rounded-md border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+        ></textarea>
+        <label
+          className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
+          htmlFor="ideas"
+        >
+         Elképzelések és igények
+        </label>
+      </div>
+      {/* eddig */}
+      {/* Custom ideas area */}
+      <div className="mb-4">
+        <textarea
+          id="custom"
+          name="custom"
+          rows="4"
+          className="w-full text-[13px] px-1 py-1 text-white text-sm border rounded-md border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
+        ></textarea>
+        <label
+          className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
+          htmlFor="custom"
+        >
+         Egyedi igények (opcionális)
+        </label>
+      </div>
+      {/* eddig */}
+      <div className="w-full flex justify-center">
+        <button type="submit">
+          <div className="flex justify-center items-center w-full mt-5">
+            <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
+              <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
+                <div className="text-[10px] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#DBCFB8] to-[#837C67]">
+                  Ajánlat kérése
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </button>
+        </button>
+      </div>
     </form>
   );
 };
