@@ -5,6 +5,7 @@ import Heading from "../components/Heading";
 import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import PriceCard from "../components/PriceCard";
+import TestemonialCard from "../components/TestemonialCard";
 
 const Services = () => {
   const data = {
@@ -66,6 +67,10 @@ const Services = () => {
         ],
       },
     },
+    testemonials: [
+      "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
+      "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
+    ],
   };
 
   return (
@@ -83,15 +88,36 @@ const Services = () => {
       <div className="mt-12">
         <Subheading content="Kiemelt szolgáltatásaink" />
       </div>
-      <div className="flex flex-col items-stretch mb-5 md:flex-row">
+      <div className="flex flex-col items-stretch mb-10 md:flex-row">
         <PriceCard data={data.priceCardData.cardOne} />
         <PriceCard data={data.priceCardData.cardTwo} />
         <PriceCard data={data.priceCardData.cardThree} />
       </div>
-      <div className="mb-16">
+      <div className="mb-5">
         <Description content={data.moreInfo} />
       </div>
-      <Button content="Kérjen ajánlatot most" />
+      <div className="mb-28">
+        <Button content="Kérjen ajánlatot most" />
+      </div>
+      <div className="mb-3">
+        <Subheading content="Elégedett ügyfelek mondták rólunk" />
+      </div>
+      <div className="flex flex-col xl:flex-row">
+        <div className="flex">
+          {data.testemonials.map((content, id) => (
+            <TestemonialCard
+              content={content}
+              key={`testemonial-card-${id}`}
+              active={id === 0 ? true : false}
+            />
+          ))}
+        </div>
+        <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
+          A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat
+          nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és
+          hatékony online jelenlétet kialakítani.
+        </div>
+      </div>
     </div>
   );
 };
