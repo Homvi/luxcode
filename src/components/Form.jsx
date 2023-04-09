@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Form = () => {
   const [messageSent, setMessageSent] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,6 +41,7 @@ const Form = () => {
       // window.location.replace('/success');
     } catch (error) {
       console.error("Error submitting form:", error);
+      setIsError(true);
       // Display an error message or handle the error as appropriate
     }
   };
@@ -204,6 +206,11 @@ const Form = () => {
           </div>
           {messageSent && (
             <div className=" mt-4 text-xs text-lime-300">Üzenet elküldve </div>
+          )}
+          {isError && (
+            <div className=" mt-4 text-xs text-red-300">
+              Nem sikerült elküldeni
+            </div>
           )}
         </button>
       </div>
