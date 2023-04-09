@@ -4,11 +4,11 @@ const Form = () => {
   return (
     <form
       className="w-full"
-      action="/success/"
       name="quote"
       method="post"
       data-netlify="true"
       onSubmit="submit"
+      data-netlify-success="/success"
     >
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
