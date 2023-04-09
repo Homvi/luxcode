@@ -9,6 +9,7 @@ const Form = () => {
       data-netlify="true"
       onSubmit="submit"
       data-netlify-success="/success"
+      action="/success.html"
     >
       <input type="hidden" name="form-name" value="quote" />
       {/* név */}
