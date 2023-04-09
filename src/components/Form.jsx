@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <form className="w-full" name="quote" method="post" action="/successpage">
+    <form className="w-full" action="/thank-you" name="quote" method="post" >
         
         <input type="hidden" name="form-name" value="quote" />
       {/* név */}
