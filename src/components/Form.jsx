@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
+  const [messageSent, setMessageSent] = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Submit happend");
@@ -20,14 +22,19 @@ const Form = () => {
     console.log(formData);
 
     try {
-      const response = await fetch("https://email-app-adakin.herokuapp.com/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://email-app-adakin.herokuapp.com/submit-form",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
       console.log(data);
+
+      setMessageSent(true);
 
       // Redirect to your custom success page
       // window.location.replace('/success');
@@ -195,6 +202,9 @@ const Form = () => {
               </div>
             </div>
           </div>
+          {messageSent && (
+            <div className=" mt-4 text-xs text-lime-300">Üzenet elküldve </div>
+          )}
         </button>
       </div>
     </form>
