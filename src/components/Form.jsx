@@ -2,9 +2,8 @@ import React from "react";
 
 const Form = () => {
   return (
-    <form className="w-full"  name="quote" method="post" >
-        
-        <input type="hidden" name="form-name" value="quote" />
+    <form className="w-full" action="/success" name="quote" method="post">
+      <input type="hidden" name="form-name" value="quote" />
       {/* név */}
       <div className="mb-4">
         <input
@@ -129,7 +128,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="ideas"
         >
-         Elképzelések és igények
+          Elképzelések és igények
         </label>
       </div>
       {/* eddig */}
@@ -145,7 +144,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="custom"
         >
-         Egyedi igények (opcionális)
+          Egyedi igények (opcionális)
         </label>
       </div>
       {/* eddig */}

@@ -2,7 +2,7 @@ import Landing from "./pages/Landing";
 import { Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Quote from "./pages/Quote";
-/* import Success from "./pages/Success"; */
+import Success from "./pages/Success";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/services" element={<Services />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/thank-you" element={<Landing />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </div>
     </>
