@@ -2,7 +2,7 @@ import Landing from "./pages/Landing";
 import { Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Quote from "./pages/Quote";
-import Success from "./pages/Success";
+/* import Success from "./pages/Success"; */
 
 function App() {
   return (
