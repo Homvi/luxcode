@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <form
       className="w-full"
-      action="/success"
+      action="/success/"
       name="quote"
       method="post"
       data-netlify="true"
