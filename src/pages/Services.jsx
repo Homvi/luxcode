@@ -22,25 +22,25 @@ const Services = () => {
         <Subheading content={data[language].subheading} />
       </div>
       <div className="mb-5">
-        <Heading content="Szolgáltatásaink" />
+        <Heading content={data[language].services.heading} />
       </div>
       <div className="mb-16">
         <Description content={data[language].services.description} />
       </div>
       <div className="mt-12">
-        <Subheading content="Kiemelt szolgáltatásaink" />
+        <Subheading content={data[language].services.featuredServices}/>
       </div>
       <div className="flex flex-col items-stretch mb-10 md:flex-row">
-        <PriceCard data={data[language].services.priceCardData.cardOne} />
-        <PriceCard data={data[language].services.priceCardData.cardTwo} />
-        <PriceCard data={data[language].services.priceCardData.cardThree} />
+        <PriceCard data={data[language].services.priceCardData.cardOne} buttonContent={data[language].services.priceCardBtnContent}/>
+        <PriceCard data={data[language].services.priceCardData.cardTwo} buttonContent={data[language].services.priceCardBtnContent}/>
+        <PriceCard data={data[language].services.priceCardData.cardThree} buttonContent={data[language].services.priceCardBtnContent}/>
       </div>
       <div className="mb-5">
         <Description content={data[language].services.moreInfo} />
       </div>
       <div className="mb-28">
         <Link to="/quote">
-          <Button content="Kérjen ajánlatot most" />
+          <Button content={data[language].services.requestQuoteBtnContent} />
         </Link>
       </div>
       <div className="mb-3">

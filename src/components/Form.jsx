@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({data, language}) => {
   const [messageSent, setMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Submit happend");
 
     // Get form data
     const formData = {
@@ -62,7 +62,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="name"
         >
-          Név
+          {data[language].requestQuote.formLabels.name}
         </label>
       </div>
       {/* email */}
@@ -78,7 +78,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="email"
         >
-          Email
+          {data[language].requestQuote.formLabels.email}
         </label>
       </div>
       {/* eddig */}
@@ -96,7 +96,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="tel"
         >
-          Telefonszám
+          {data[language].requestQuote.formLabels.phone}
         </label>
       </div>
       {/* eddig */}
@@ -113,7 +113,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="company"
         >
-          Cég neve (opcionális)
+          {data[language].requestQuote.formLabels.companyName}
         </label>
       </div>
       {/* eddig */}
@@ -141,7 +141,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="services"
         >
-          Válaszzon az ajánlatok közül
+                 {data[language].requestQuote.formLabels.selectFromTheOptions}
         </label>
       </div>
       {/* eddig */}
@@ -157,7 +157,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="purpose"
         >
-          Weboldal célja
+          {data[language].requestQuote.formLabels.purpose}
         </label>
       </div>
       {/* eddig */}
@@ -173,7 +173,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="ideas"
         >
-          Elképzelések és igények
+          {data[language].requestQuote.formLabels.needs}
         </label>
       </div>
       {/* eddig */}
@@ -189,7 +189,7 @@ const Form = () => {
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="custom"
         >
-          Egyedi igények (opcionális)
+          {data[language].requestQuote.formLabels.specificNeeds}
         </label>
       </div>
       {/* eddig */}

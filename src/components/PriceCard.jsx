@@ -3,7 +3,7 @@ import Description from "./Description";
 import check from "../assets/check.svg";
 import { Link } from "react-router-dom";
 
-const PriceCard = ({ data }) => {
+const PriceCard = ({ data, buttonContent }) => {
   return (
     <div className="min-h-[580px] shadow-xl flex items-start  flex-col justify-between w-full p-5 rounded-md md:w-80 mr-2 bg-[#1A1B1A] mt-2 text-white">
       <div className="wrapper">
@@ -36,7 +36,7 @@ const PriceCard = ({ data }) => {
         <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
           <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
             <div className="text-[10px] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#DBCFB8] to-[#837C67]">
-              <Link to="/quote">Ezt választom</Link>
+              <Link to="/quote">{buttonContent}</Link>
             </div>
           </div>
         </div>

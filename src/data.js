@@ -12,12 +12,26 @@ export const data = {
         "Üdvözöljük a LuxCode-nál! Egyedi és elegáns weboldalak tervezése és fejlesztése az Ön vállalkozása számára. Profi csapatunk gondoskodik a tökéletes online megjelenésről. Legyen sikeres velünk az internetes világban!",
     },
     requestQuote: {
+      heading: "Ajánlatkérés",
       description:
         "Kedves Ügyfelünk! Az ajánlatkéréshez kérjük, töltse ki az alábbi űrlapot. Rövid időn belül elkészítjük személyre szabott ajánlatunkat és kapcsolatba lépünk Önnel a részletek egyeztetése érdekében.",
+      formLabels: {
+        name: "Név",
+        email: "Email",
+        phone: "Telefonszám",
+        comapnyName: "Cég neve (opcionális)",
+        selectFromTheOptions: "Válaszzon az ajánlatok közül",
+        purpose: "Weboldal célja",
+        needs: "Elképzelések és igények",
+        specificNeeds: "Egyedi igények (opcionális)",
+      },
     },
     services: {
+      heading: "Szolgáltatásaink",
       description:
         "Fedezze fel a LuxCode kreatív és hatékony webfejlesztési szolgáltatásait, amelyek segítenek vállalkozásának növekedésében és sikerességében az online világban.",
+      featuredServices: "Kiemelt szolgáltatásaink",
+      priceCardBtnContent: "Ezt választom",
       moreInfo:
         "Amennyiben a fentiekben felsorolt szolgáltatásoktól eltérő igényük merülne fel, kérjük, ne habozzanak jelezni felénk. Kattintsanak az alábbi gombra, és használják a webes kalkulátorunkat az igényeik pontosabb meghatározásához.",
       priceCardData: {
@@ -75,12 +89,13 @@ export const data = {
           ],
         },
       },
+      requestQuoteBtnContent: "Kérjen ajánlatot most",
     },
     testemonials: [
       "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
       "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
     ],
-    testemonialTitle:"Elégedett ügyfelek mondták rólunk",
+    testemonialTitle: "Elégedett ügyfelek mondták rólunk",
     testemonialDescription:
       "A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és hatékony online jelenlétet kialakítani.",
   },
@@ -97,12 +112,26 @@ export const data = {
         "Welcome to LuxCode! Custom and elegant website design and development for your business. Our professional team ensures the perfect online presence. Be successful with us in the online world!",
     },
     requestQuote: {
+      heading: "Request a quote",
       description:
         "Dear Customer! To request a quote, please fill out the form below. We will prepare our personalized offer for you shortly and contact you to discuss the details.",
+      formLabels: {
+        name: "Name",
+        email: "Email",
+        phone: "Phone number",
+        companyName: "Company name (optional)",
+        selectFromTheOptions: "Choose from the offers",
+        purpose: "Website purpose",
+        needs: "Ideas and requirements",
+        specificNeeds: "Specific needs (optional)",
+      },
     },
     services: {
+      heading: "Our services",
       description:
         "Discover LuxCode's creative and efficient web development services that help your business grow and succeed in the online world.",
+      featuredServices: "Featured services",
+      priceCardBtnContent: "I choose this",
       moreInfo:
         "If you have needs different from the services listed above, please do not hesitate to let us know. Click on the button below and use our online calculator to better define your needs.",
       priceCardData: {
@@ -158,12 +187,13 @@ export const data = {
           ],
         },
       },
+      requestQuoteBtnContent: "Request a quote now",
     },
     testemonials: [
       "The wedding website designed by LuxCode was beautiful and easy to use. Thank you for the fantastic work!",
       "LuxCode did a great job on the Akman Solutions website, which now perfectly reflects our company's spirit and services.",
     ],
-    testemonialTitle:"Satisfied clients said about us",
+    testemonialTitle: "Satisfied clients said about us",
     testemonialDescription:
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
@@ -180,14 +210,28 @@ export const data = {
         "¡Bienvenido a LuxCode! Diseño y desarrollo de sitios web personalizados y elegantes para su negocio. Nuestro equipo profesional se encarga de la perfecta presencia en línea. ¡Ten éxito con nosotros en el mundo en línea!",
     },
     requestQuote: {
+      heading: "Solicitud de presupuesto",
       description:
         "Estimado cliente! Para solicitar un presupuesto, complete el siguiente formulario. En breve, prepararemos nuestra oferta personalizada para usted y nos pondremos en contacto para discutir los detalles.",
+      formLabels: {
+        name: "Nombre",
+        email: "Correo electrónico",
+        phone: "Número de teléfono",
+        companyName: "Nombre de la empresa (opcional)",
+        selectFromTheOptions: "Elija entre las opciones",
+        purpose: "Propósito del sitio web",
+        needs: "Ideas y requisitos",
+        specificNeeds: "Necesidades específicas (opcional)",
+      },
     },
     services: {
+      heading: "Nuestros servicios",
       description:
         "Descubra los servicios creativos y eficientes de desarrollo web de LuxCode que ayudan a su negocio a crecer y tener éxito en el mundo en línea.",
       moreInfo:
         "Si tiene necesidades diferentes a los servicios mencionados anteriormente, no dude en informarnos. Haga clic en el botón a continuación y utilice nuestra calculadora en línea para definir mejor sus necesidades.",
+      featuredServices: "Servicios destacados",
+      priceCardBtnContent: "Elijo esto",
       priceCardData: {
         cardOne: {
           title: "Boda",
@@ -242,8 +286,9 @@ export const data = {
           ],
         },
       },
+      requestQuoteBtnContent: "Solicite un presupuesto ahora",
     },
-    testemonialTitle:"Clientes satisfechos hablaron de nosotros",
+    testemonialTitle: "Clientes satisfechos hablaron de nosotros",
     testemonials: [
       "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
       "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",

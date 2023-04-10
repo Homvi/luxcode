@@ -20,7 +20,7 @@ const Quote = () => {
       <div className="mt-12">
         <Subheading content={data[language].subheading} />
         <div className="mb-5">
-          <Heading content="Ajánlatkérés" />
+          <Heading content={data[language].requestQuote.heading} />
         </div>
       </div>
       <div className="mb-16">
@@ -28,11 +28,11 @@ const Quote = () => {
       </div>
       {/* form comes here */}
       <div className="w-ful lg:w-[70%] xl:w-[50%] min-h-[500px] mb-24">
-        <Form />
+        <Form data={data} language={language}/>
       </div>
       {/* form comes here */}
       <div className="mb-3">
-      <Subheading content={data[language].testemonialTitle} />
+        <Subheading content={data[language].testemonialTitle} />
       </div>
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
