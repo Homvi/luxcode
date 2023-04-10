@@ -8,16 +8,8 @@ import TestemonialCard from "../components/TestemonialCard";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
 import pc from "../assets/pc.png";
+import {data} from "../data";
 import { useEffect, useState } from "react";
-
-const data = {
-  description:
-    "Üdvözöljük a LuxCode-nál! Egyedi és elegáns weboldalak tervezése és fejlesztése az Ön vállalkozása számára. Profi csapatunk gondoskodik a tökéletes online megjelenésről. Legyen sikeres velünk az internetes világban!",
-  testemonials: [
-    "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
-    "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
-  ],
-};
 
 const Landing = () => {
   const [imageLoading, setImageLoading] = useState(true);
@@ -68,7 +60,8 @@ const Landing = () => {
           <Heading content="gyönyörű weboldalak " />
         </div>
         <div className="mb-16">
-          <Description content={data.description} />
+          
+          <Description content={data.HU.intro.description} />
         </div>
         <div className="my-10 mb-24">
           <div className="my-5">
@@ -85,7 +78,7 @@ const Landing = () => {
         </div>
         <div className="flex flex-col xl:flex-row">
           <div className="flex">
-            {data.testemonials.map((content, id) => (
+            {data.HU.testemonials.map((content, id) => (
               <TestemonialCard
                 content={content}
                 key={`testemonial-card-${id}`}

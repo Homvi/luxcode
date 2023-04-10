@@ -5,16 +5,9 @@ import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import TestemonialCard from "../components/TestemonialCard";
 import Form from "../components/Form";
+import {data} from "../data";
 
 const Quote = () => {
-  const data = {
-    description:
-      "Kedves Ügyfelünk! Az ajánlatkéréshez kérjük, töltse ki az alábbi űrlapot. Rövid időn belül elkészítjük személyre szabott ajánlatunkat és kapcsolatba lépünk Önnel a részletek egyeztetése érdekében.",
-    testemonials: [
-      "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
-      "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
-    ],
-  };
 
   return (
     <div className="inter p-8">
@@ -27,7 +20,7 @@ const Quote = () => {
         </div>
       </div>
       <div className="mb-16">
-        <Description content={data.description} />
+        <Description content={data.HU.requestQuote.description} />
       </div>
       {/* form comes here */}
       <div className="w-ful lg:w-[70%] xl:w-[50%] min-h-[500px] mb-24">
@@ -36,7 +29,7 @@ const Quote = () => {
       {/* form comes here */}
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
-          {data.testemonials.map((content, id) => (
+          {data.HU.testemonials.map((content, id) => (
             <TestemonialCard
               content={content}
               key={`testemonial-card-${id}`}
