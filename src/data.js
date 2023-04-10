@@ -245,7 +245,7 @@ export const data = {
         selectFromTheOptions: "Elija entre las opciones",
         options: {
           custom: "Personalizado",
-          wedding: "Boda",
+          wedding: "Bodas",
           gastro: "Gastronómico",
           business: "Empresarial",
         },
@@ -267,7 +267,7 @@ export const data = {
       priceCardBtnContent: "Elijo esto",
       priceCardData: {
         cardOne: {
-          title: "Boda",
+          title: "Bodas",
           price: "689",
           currency:"€",
           description:
