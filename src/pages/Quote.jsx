@@ -5,9 +5,12 @@ import Navbar from "../components/Navbar";
 import Subheading from "../components/Subheading";
 import TestemonialCard from "../components/TestemonialCard";
 import Form from "../components/Form";
-import {data} from "../data";
+import { data } from "../data";
+import { useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 
 const Quote = () => {
+  const [language, setLanguage] = useContext(LanguageContext);
 
   return (
     <div className="inter p-8">
@@ -20,7 +23,7 @@ const Quote = () => {
         </div>
       </div>
       <div className="mb-16">
-        <Description content={data.HU.requestQuote.description} />
+        <Description content={data[language].requestQuote.description} />
       </div>
       {/* form comes here */}
       <div className="w-ful lg:w-[70%] xl:w-[50%] min-h-[500px] mb-24">
@@ -29,7 +32,7 @@ const Quote = () => {
       {/* form comes here */}
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
-          {data.HU.testemonials.map((content, id) => (
+          {data[language].testemonials.map((content, id) => (
             <TestemonialCard
               content={content}
               key={`testemonial-card-${id}`}
@@ -38,9 +41,7 @@ const Quote = () => {
           ))}
         </div>
         <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
-          A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat
-          nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és
-          hatékony online jelenlétet kialakítani.
+          {data[language].testemonialDescription}
         </div>
       </div>
     </div>

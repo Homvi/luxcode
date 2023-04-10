@@ -52,7 +52,6 @@ const Landing = () => {
         onLoad={handleLoaded}
         className="absolute right-0 bottom-0 h-[90%] hidden lg:block"
       />
-      <div className="h1">{language}</div>
       <div className="p-8">
         {imageLoading && <Loading progress={progress} />}
         <Navbar />
