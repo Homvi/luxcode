@@ -31,6 +31,9 @@ const Quote = () => {
         <Form />
       </div>
       {/* form comes here */}
+      <div className="mb-3">
+      <Subheading content={data[language].testemonialTitle} />
+      </div>
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
           {data[language].testemonials.map((content, id) => (

@@ -1,6 +1,12 @@
 export const data = {
   HU: {
-    subheading:"Minőségi weboldalak, elegáns megjelenés - LuxCode",
+    subheading: "Minőségi weboldalak, elegáns megjelenés - LuxCode",
+    landingPage: {
+      mainHeadingFirstRow: "Egyedi tervezésű,",
+      mainHeadingSecondRow: "gyönyörű weboldalak",
+      firstButtonContent: "Fedezze fel szolgáltatásainkat",
+      secondButtonContent: "Kérjen ajánlatot most",
+    },
     intro: {
       description:
         "Üdvözöljük a LuxCode-nál! Egyedi és elegáns weboldalak tervezése és fejlesztése az Ön vállalkozása számára. Profi csapatunk gondoskodik a tökéletes online megjelenésről. Legyen sikeres velünk az internetes világban!",
@@ -74,11 +80,18 @@ export const data = {
       "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
       "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
     ],
+    testemonialTitle:"Elégedett ügyfelek mondták rólunk",
     testemonialDescription:
       "A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és hatékony online jelenlétet kialakítani.",
   },
   EN: {
-    subheading:"High-quality websites, elegant appearance - LuxCode",
+    subheading: "High-quality websites, elegant appearance - LuxCode",
+    landingPage: {
+      mainHeadingFirstRow: "Custom-designed,",
+      mainHeadingSecondRow: "beautiful websites",
+      firstButtonContent: "Explore our services",
+      secondButtonContent: "Request a quote now",
+    },
     intro: {
       description:
         "Welcome to LuxCode! Custom and elegant website design and development for your business. Our professional team ensures the perfect online presence. Be successful with us in the online world!",
@@ -150,11 +163,18 @@ export const data = {
       "The wedding website designed by LuxCode was beautiful and easy to use. Thank you for the fantastic work!",
       "LuxCode did a great job on the Akman Solutions website, which now perfectly reflects our company's spirit and services.",
     ],
+    testemonialTitle:"Satisfied clients said about us",
     testemonialDescription:
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
-    subheading:"Sitios web de alta calidad, apariencia elegante - LuxCode",
+    subheading: "Sitios web de alta calidad, apariencia elegante - LuxCode",
+    landingPage: {
+      mainHeadingFirstRow: "Diseños personalizados,",
+      mainHeadingSecondRow: "hermosos sitios web",
+      firstButtonContent: "Descubra nuestros servicios",
+      secondButtonContent: "Solicite un presupuesto ahora",
+    },
     intro: {
       description:
         "¡Bienvenido a LuxCode! Diseño y desarrollo de sitios web personalizados y elegantes para su negocio. Nuestro equipo profesional se encarga de la perfecta presencia en línea. ¡Ten éxito con nosotros en el mundo en línea!",
@@ -223,6 +243,7 @@ export const data = {
         },
       },
     },
+    testemonialTitle:"Clientes satisfechos hablaron de nosotros",
     testemonials: [
       "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
       "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",

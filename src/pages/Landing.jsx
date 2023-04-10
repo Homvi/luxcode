@@ -59,8 +59,8 @@ const Landing = () => {
           <Subheading content={data[language].subheading} />
         </div>
         <div className="mb-5">
-          <Heading content="Egyedi tervezésű, " />
-          <Heading content="gyönyörű weboldalak " />
+          <Heading content={data[language].landingPage.mainHeadingFirstRow} />
+          <Heading content={data[language].landingPage.mainHeadingSecondRow} />
         </div>
         <div className="mb-16">
           <Description content={data[language].intro.description} />
@@ -68,15 +68,15 @@ const Landing = () => {
         <div className="my-10 mb-24">
           <div className="my-5">
             <Link to="/services">
-              <Button content="Fedezze fel szolgáltatásainkat" />
+              <Button content={data[language].landingPage.firstButtonContent} />
             </Link>
           </div>
           <Link to="/quote">
-            <Button content="Kérjen ajánlatot most" />
+            <Button content={data[language].landingPage.secondButtonContent} />
           </Link>
         </div>
         <div className="mb-3">
-          <Subheading content="Elégedett ügyfelek mondták rólunk" />
+          <Subheading content={data[language].testemonialTitle} />
         </div>
         <div className="flex flex-col xl:flex-row">
           <div className="flex">

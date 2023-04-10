@@ -44,7 +44,7 @@ const Services = () => {
         </Link>
       </div>
       <div className="mb-3">
-        <Subheading content="Elégedett ügyfelek mondták rólunk" />
+      <Subheading content={data[language].testemonialTitle} />
       </div>
       <div className="flex flex-col xl:flex-row">
         <div className="flex">
