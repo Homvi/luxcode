@@ -7,6 +7,7 @@ import { HiLanguage } from "react-icons/hi2";
 import { useState } from "react";
 
 const Navbar = () => {
+  // eslint-disable-next-line no-unused-vars
   const [language, setLanguage] = useContext(LanguageContext);
   const [languageOpen, setLanguageOpen] = useState(false);
 

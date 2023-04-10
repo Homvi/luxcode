@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
 
 const Quote = () => {
+  // eslint-disable-next-line no-unused-vars
   const [language, setLanguage] = useContext(LanguageContext);
 
   return (

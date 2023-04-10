@@ -16,7 +16,7 @@ const Landing = () => {
   const [imageLoading, setImageLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
-
+// eslint-disable-next-line no-unused-vars
   const [language, setLanguage] = useContext(LanguageContext);
 
   const [arrayIndex, setArrayIndex] = useState(0);
