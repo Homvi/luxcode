@@ -73,6 +73,8 @@ export const data = {
       "A LuxCode által tervezett esküvői weboldalunk gyönyörű és könnyen használható volt.Köszönjük a fantasztikus munkát!",
       "A LuxCode remek munkát végzett az Akman Solutions weboldalán, amely most tökéletesen tükrözi vállalkozásunk szellemiségét és szolgáltatásait.",
     ],
+    testemonialDescription:
+      "A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és hatékony online jelenlétet kialakítani.",
   },
   EN: {
     intro: {
@@ -141,11 +143,13 @@ export const data = {
           ],
         },
       },
-      testemonials: [
-        "The wedding website designed by LuxCode was beautiful and easy to use. Thank you for the fantastic work!",
-        "LuxCode did a great job on the Akman Solutions website, which now perfectly reflects our company's spirit and services.",
-      ],
     },
+    testemonials: [
+      "The wedding website designed by LuxCode was beautiful and easy to use. Thank you for the fantastic work!",
+      "LuxCode did a great job on the Akman Solutions website, which now perfectly reflects our company's spirit and services.",
+    ],
+    testemonialDescription:
+      "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
     intro: {
@@ -216,9 +220,11 @@ export const data = {
         },
       },
     },
-    testemonials: [
-      "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
-      "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",
-    ],
   },
+  testemonials: [
+    "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
+    "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",
+  ],
+  testemonialDescription:
+    "LuxCode se enorgullece de proporcionar servicios de la más alta calidad a sus clientes. Nuestro objetivo es ayudar a nuestros clientes a establecer una presencia en línea sólida y eficiente.",
 };
