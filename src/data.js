@@ -220,11 +220,11 @@ export const data = {
         },
       },
     },
+    testemonials: [
+      "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
+      "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",
+    ],
+    testemonialDescription:
+      "LuxCode se enorgullece de proporcionar servicios de la más alta calidad a sus clientes. Nuestro objetivo es ayudar a nuestros clientes a establecer una presencia en línea sólida y eficiente.",
   },
-  testemonials: [
-    "El sitio web de bodas diseñado por LuxCode era hermoso y fácil de usar. ¡Gracias por el fantástico trabajo!",
-    "LuxCode hizo un gran trabajo en el sitio web de Akman Solutions, que ahora refleja perfectamente el espíritu y los servicios de nuestra empresa.",
-  ],
-  testemonialDescription:
-    "LuxCode se enorgullece de proporcionar servicios de la más alta calidad a sus clientes. Nuestro objetivo es ayudar a nuestros clientes a establecer una presencia en línea sólida y eficiente.",
 };

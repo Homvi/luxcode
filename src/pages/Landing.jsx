@@ -8,13 +8,16 @@ import TestemonialCard from "../components/TestemonialCard";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
 import pc from "../assets/pc.png";
-import {data} from "../data";
-import { useEffect, useState } from "react";
+import { data } from "../data";
+import { useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 
 const Landing = () => {
   const [imageLoading, setImageLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
+
+  const [language, setLanguage] = useContext(LanguageContext);
 
   const [arrayIndex, setArrayIndex] = useState(0);
   // eslint-disable-next-line no-unused-vars
@@ -49,6 +52,7 @@ const Landing = () => {
         onLoad={handleLoaded}
         className="absolute right-0 bottom-0 h-[90%] hidden lg:block"
       />
+      <div className="h1">{language}</div>
       <div className="p-8">
         {imageLoading && <Loading progress={progress} />}
         <Navbar />
@@ -60,8 +64,7 @@ const Landing = () => {
           <Heading content="gyönyörű weboldalak " />
         </div>
         <div className="mb-16">
-          
-          <Description content={data.HU.intro.description} />
+          <Description content={data[language].intro.description} />
         </div>
         <div className="my-10 mb-24">
           <div className="my-5">
@@ -78,7 +81,7 @@ const Landing = () => {
         </div>
         <div className="flex flex-col xl:flex-row">
           <div className="flex">
-            {data.HU.testemonials.map((content, id) => (
+            {data[language].testemonials.map((content, id) => (
               <TestemonialCard
                 content={content}
                 key={`testemonial-card-${id}`}
@@ -87,7 +90,7 @@ const Landing = () => {
             ))}
           </div>
           <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
-         { data.HU.testemonialDescription}
+            {data[language].testemonialDescription}
           </div>
         </div>
       </div>
