@@ -15,7 +15,7 @@ const PriceCard = ({ data, buttonContent }) => {
             {data.price}
           </div>
           <div className="text-[12px] ml-1 pt-[8px]   bg-gradient-to-b from-[#746E5E] to-[#837C67] bg-clip-text text-transparent">
-            Ft
+          {data.currency}
           </div>
         </div>
         <div className="mb-5">

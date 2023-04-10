@@ -47,6 +47,7 @@ export const data = {
         cardOne: {
           title: "Esküvői",
           price: "139 990",
+          currency:"Ft",
           description:
             "Az Esküvői csomagot házasságra készülő pároknak ajánljuk, hogy egyszerűbben szervezhessék a nagy napjukat.",
           services: [
@@ -66,6 +67,7 @@ export const data = {
         cardTwo: {
           title: "Gasztro",
           price: "119 990",
+          currency:"Ft",
           description:
             "Éttermeknek, kávézóknak és egyéb vendéglátóipari vállalkozásoknak ajánlott csomag.",
           services: [
@@ -83,6 +85,7 @@ export const data = {
         cardThree: {
           title: "Üzleti",
           price: "369 990",
+          currency:"Ft",
           description:
             "Az Üzleti csomagot vállalkozásoknak kínáljuk a digitális jelenlétük fejlesztése céljából.",
           services: [
@@ -155,7 +158,8 @@ export const data = {
       priceCardData: {
         cardOne: {
           title: "Wedding",
-          price: "139 990",
+          price: "689",
+          currency:"€",
           description:
             "The Wedding package is recommended for couples preparing for marriage to help them easily organize their big day.",
           services: [
@@ -174,7 +178,8 @@ export const data = {
         },
         cardTwo: {
           title: "Gastro",
-          price: "119 990",
+          price: "689",
+          currency:"€",
           description: "For restaurants, cafes, and other catering businesses",
           services: [
             "Custom and stylish website design (1-6 pages)",
@@ -189,7 +194,8 @@ export const data = {
         },
         cardThree: {
           title: "Business",
-          price: "369 990",
+          price: "889",
+          currency:"€",
           description:
             "The Business package is offered to businesses for the development of their digital presence.",
           services: [
@@ -262,7 +268,8 @@ export const data = {
       priceCardData: {
         cardOne: {
           title: "Boda",
-          price: "139 990",
+          price: "689",
+          currency:"€",
           description:
             "El paquete de boda está recomendado para parejas que se preparan para casarse, para ayudarles a organizar fácilmente su gran día.",
           services: [
@@ -281,7 +288,8 @@ export const data = {
         },
         cardTwo: {
           title: "Gastro",
-          price: "119990",
+          price: "689",
+          currency:"€",
           description:
             "Para restaurantes, cafeterías y otros negocios de catering",
           services: [
@@ -297,7 +305,8 @@ export const data = {
         },
         cardThree: {
           title: "Negocios",
-          price: "369 990",
+          price: "889",
+          currency:"€",
           description:
             "El paquete de negocios se ofrece a las empresas para el desarrollo de su presencia digital.",
           services: [
