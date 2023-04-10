@@ -1,5 +1,6 @@
 export const data = {
   HU: {
+    subheading:"Minőségi weboldalak, elegáns megjelenés - LuxCode",
     intro: {
       description:
         "Üdvözöljük a LuxCode-nál! Egyedi és elegáns weboldalak tervezése és fejlesztése az Ön vállalkozása számára. Profi csapatunk gondoskodik a tökéletes online megjelenésről. Legyen sikeres velünk az internetes világban!",
@@ -77,6 +78,7 @@ export const data = {
       "A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és hatékony online jelenlétet kialakítani.",
   },
   EN: {
+    subheading:"High-quality websites, elegant appearance - LuxCode",
     intro: {
       description:
         "Welcome to LuxCode! Custom and elegant website design and development for your business. Our professional team ensures the perfect online presence. Be successful with us in the online world!",
@@ -152,6 +154,7 @@ export const data = {
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
+    subheading:"Sitios web de alta calidad, apariencia elegante - LuxCode",
     intro: {
       description:
         "¡Bienvenido a LuxCode! Diseño y desarrollo de sitios web personalizados y elegantes para su negocio. Nuestro equipo profesional se encarga de la perfecta presencia en línea. ¡Ten éxito con nosotros en el mundo en línea!",

@@ -19,7 +19,7 @@ const Services = () => {
     <div className="inter p-8">
       <Navbar />
       <div className="mt-12">
-        <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
+        <Subheading content={data[language].subheading} />
       </div>
       <div className="mb-5">
         <Heading content="Szolgáltatásaink" />

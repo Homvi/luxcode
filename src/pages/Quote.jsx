@@ -18,7 +18,7 @@ const Quote = () => {
       <Navbar />
 
       <div className="mt-12">
-        <Subheading content="Minőségi weboldalak, elegáns megjelenés - LuxCode" />
+        <Subheading content={data[language].subheading} />
         <div className="mb-5">
           <Heading content="Ajánlatkérés" />
         </div>
