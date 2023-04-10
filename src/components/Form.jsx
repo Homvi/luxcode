@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-const Form = ({data, language}) => {
+const Form = ({ data, language }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -125,23 +124,23 @@ const Form = ({data, language}) => {
           className="w-full  px-0 text-[13px] bold text-[#B8A080]  py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
         >
           <option className=" bg-[#141514]/95 " value="custom">
-            Egyedi
+            {data[language].requestQuote.formLabels.options.custom}
           </option>
           <option className=" bg-[#141514]/95 " value="wedding">
-            Esküvői
+            {data[language].requestQuote.formLabels.options.wedding}
           </option>
           <option className=" bg-[#141514]/95 " value="restaurant">
-            Gasztro
+            {data[language].requestQuote.formLabels.options.gastro}
           </option>
           <option className=" bg-[#141514]/95 " value="business">
-            Üzleti
+            {data[language].requestQuote.formLabels.options.business}
           </option>
         </select>
         <label
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
           htmlFor="services"
         >
-                 {data[language].requestQuote.formLabels.selectFromTheOptions}
+          {data[language].requestQuote.formLabels.selectFromTheOptions}
         </label>
       </div>
       {/* eddig */}
@@ -199,17 +198,20 @@ const Form = ({data, language}) => {
             <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
               <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
                 <div className="text-[10px] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#DBCFB8] to-[#837C67]">
-                  Ajánlat kérése
+                  {data[language].requestQuote.submitFormBtnContent}
                 </div>
               </div>
             </div>
           </div>
           {messageSent && (
-            <div className=" mt-4 text-xs text-lime-300">Üzenet elküldve </div>
+            <div className=" mt-4 text-xs text-lime-300">
+              {" "}
+              {data[language].requestQuote.successMessage}
+            </div>
           )}
           {isError && (
             <div className=" mt-4 text-xs text-red-300">
-              Nem sikerült elküldeni
+              {data[language].requestQuote.errorMessage}
             </div>
           )}
         </button>
