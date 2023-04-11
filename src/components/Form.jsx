@@ -32,8 +32,6 @@ const Form = ({ data, language }) => {
       );
 
       const data = await response.json();
-      console.log(data);
-
       setMessageSent(true);
 
       // Redirect to your custom success page
