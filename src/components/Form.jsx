@@ -31,7 +31,7 @@ const Form = ({ data, language }) => {
       );
 
       const data = await response.json();
-
+      console.log(data);
       setMessageSent(true);
       setName("");
 
