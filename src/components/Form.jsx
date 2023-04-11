@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Form = ({ data, language }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [name, setName] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,6 +19,8 @@ const Form = ({ data, language }) => {
       custom: event.target.custom.value,
     };
 
+    console.log(formData);
+
     try {
       const response = await fetch(
         "https://email-app-adakin.herokuapp.com/submit-form",
@@ -31,9 +32,9 @@ const Form = ({ data, language }) => {
       );
 
       const data = await response.json();
+      console.log(data);
 
       setMessageSent(true);
-      setName("");
 
       // Redirect to your custom success page
       // window.location.replace('/success');
@@ -54,9 +55,6 @@ const Form = ({ data, language }) => {
           type="text"
           id="name"
           name="name"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
           placeholder="John Doe"
         />
         <label
