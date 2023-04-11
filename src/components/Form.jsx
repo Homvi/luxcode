@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Form = ({ data, language }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [name, setName] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,7 +33,9 @@ const Form = ({ data, language }) => {
       );
 
       const data = await response.json();
+      console.log(data);
       setMessageSent(true);
+      setName("");
 
       // Redirect to your custom success page
       // window.location.replace('/success');
@@ -52,6 +55,9 @@ const Form = ({ data, language }) => {
           className="w-full text-[13px] text-white px-0 py-0 border-b border-gray-200/40 bg-transparent thin focus:outline-none focus:border-[#DEA96B]"
           type="text"
           id="name"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          required
           name="name"
           placeholder="John Doe"
         />
