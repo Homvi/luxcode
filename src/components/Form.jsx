@@ -4,10 +4,11 @@ const Form = ({ data, language }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
   const [name, setName] = useState("");
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    setSending(true);
     // Get form data
     const formData = {
       name: event.target.name.value,
@@ -36,13 +37,15 @@ const Form = ({ data, language }) => {
       console.log(data);
       setMessageSent(true);
       setName("");
+      setSending(false);
 
       // Redirect to your custom success page
       // window.location.replace('/success');
     } catch (error) {
       console.error("Error submitting form:", error);
-      setIsError(true);
       // Display an error message or handle the error as appropriate
+      setSending(false);
+      setIsError(true);
     }
   };
 
@@ -197,7 +200,7 @@ const Form = ({ data, language }) => {
       </div>
       {/* eddig */}
       <div className="w-full flex justify-center">
-        <button type="submit">
+        <button type="submit" disabled={sending}>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
               <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
@@ -208,14 +211,19 @@ const Form = ({ data, language }) => {
             </div>
           </div>
           {messageSent && (
-            <div className=" mt-4 text-xs text-lime-300">
+            <div className=" mt-4 text-xs text-lime-300 thin">
               {" "}
               {data[language].requestQuote.successMessage}
             </div>
           )}
           {isError && (
-            <div className=" mt-4 text-xs text-red-300">
+            <div className=" mt-4 text-xs text-red-300 thin">
               {data[language].requestQuote.errorMessage}
+            </div>
+          )}
+          {sending && (
+            <div className=" mt-4 text-xs text-white thin">
+              {data[language].requestQuote.sendingMessage}
             </div>
           )}
         </button>

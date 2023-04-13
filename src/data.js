@@ -34,6 +34,7 @@ export const data = {
       submitFormBtnContent: "Küldés",
       successMessage: "Űrlap sikeresen elküldve",
       errorMessage: "Az űrlap elküldése sikertelen",
+      sendingMessage:"Küldés..."
     },
     services: {
       heading: "Szolgáltatásaink",
@@ -146,6 +147,7 @@ export const data = {
       submitFormBtnContent: "Submit Request",
       successMessage: "Form submitted successfully",
       errorMessage: "Form submission failed",
+      sendingMessage:"Sending..."
     },
     services: {
       heading: "Our services",
@@ -256,6 +258,7 @@ export const data = {
       submitFormBtnContent: "Enviar solicitud",
       successMessage: "Formulario enviado exitosamente",
       errorMessage: "Envío del formulario fallido",
+      sendingMessage:"Enviando..."
     },
     services: {
       heading: "Nuestros servicios",
