@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const PriceCard = ({ data, buttonContent }) => {
   return (
-    <div className="min-h-[580px] shadow-xl flex items-start  flex-col justify-between w-full p-5 rounded-md md:w-80 mr-2 bg-[#1A1B1A] mt-2 text-white">
+    <div className="md:min-h-[580px] shadow-xl flex items-start  flex-col justify-between w-full p-5 rounded-md md:w-80 mr-2 bg-[#1A1B1A] mt-2 text-white">
       <div className="wrapper">
         <div className="text-xl mb-3 bg-gradient-to-b from-[#A66D3C] to-[#DEA96B] bg-clip-text text-transparent">
           {data.title}
