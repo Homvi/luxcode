@@ -25,7 +25,7 @@ const Form = ({ data, language }) => {
 
     try {
       const response = await fetch(
-        "https://email-app-adakin.herokuapp.com/submit-form",
+        "https://stormy-badlands-81408.herokuapp.com/submit-form",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
