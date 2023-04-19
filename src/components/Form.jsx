@@ -217,7 +217,7 @@ const Form = ({ data, language }) => {
           {data[language].requestQuote.acceptPrivacyContent.partOne}{" "}
           <span className="font-semibold">
             {" "}
-            <Link to="/privacy-policy">
+            <Link  target="_blank" rel="noopener noreferrer" to="/privacy-policy">
               {" "}
               {data[language].requestQuote.acceptPrivacyContent.partTwo}
             </Link>
