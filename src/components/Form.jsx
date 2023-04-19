@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import check from "../assets/check-no-circle.svg";
 import { Link } from "react-router-dom";
 
@@ -8,10 +8,17 @@ const Form = ({ data, language }) => {
   const [name, setName] = useState("");
   const [sending, setSending] = useState(false);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [termsAndConditionsError, setTermsAndConditionsError] = useState(false)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if(!isCheckboxChecked){
+      setTermsAndConditionsError(true)
+      return
+    }
+    if(isCheckboxChecked){
+      setTermsAndConditionsError(false)
+    }
     setSending(true);
     // Get form data
     const formData = {
@@ -24,8 +31,6 @@ const Form = ({ data, language }) => {
       ideas: event.target.ideas.value,
       custom: event.target.custom.value,
     };
-
-    console.log(formData);
 
     try {
       const response = await fetch(
@@ -52,14 +57,6 @@ const Form = ({ data, language }) => {
       setIsError(true);
     }
   };
-
-  useEffect(() => {
-    if (isCheckboxChecked && !sending) {
-      setIsButtonDisabled(false);
-    } else {
-      setIsButtonDisabled(true);
-    }
-  }, [isCheckboxChecked, sending]);
 
   return (
     <form className="w-full" name="quote" method="post" onSubmit={handleSubmit}>
@@ -247,7 +244,7 @@ const Form = ({ data, language }) => {
 
       {/* eddig */}
       <div className="w-full flex justify-center">
-        <button type="submit" disabled={isButtonDisabled}>
+        <button type="submit" disabled={sending}>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
               <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
@@ -257,6 +254,11 @@ const Form = ({ data, language }) => {
               </div>
             </div>
           </div>
+        </button>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+
+         { termsAndConditionsError && <div className="text-red-500 thin mt-4 text-xs">Az űrlap beküldéséhez el kell fogadnod a felhasználási feltételeket.</div>} 
           {messageSent && (
             <div className=" mt-4 text-xs text-lime-300 thin">
               {" "}
@@ -264,16 +266,15 @@ const Form = ({ data, language }) => {
             </div>
           )}
           {isError && (
-            <div className=" mt-4 text-xs text-red-300 thin">
+            <div className=" mt-4 text-xs text-red-500 thin">
               {data[language].requestQuote.errorMessage}
             </div>
           )}
           {sending && (
-            <div className=" mt-4 text-xs text-white thin">
+            <div className=" mt-4 text-xs text-lime-300 thin">
               {data[language].requestQuote.sendingMessage}
             </div>
           )}
-        </button>
       </div>
     </form>
   );
