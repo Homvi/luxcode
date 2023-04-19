@@ -217,7 +217,7 @@ const Form = ({ data, language }) => {
           Elovastam és elfogadom az{" "}
           <span className="font-semibold">
             {" "}
-            <Link to="/terms-and-conditions">adatkezelési tájékoztatóban</Link>
+            <Link to="/privacy-policy">adatkezelési tájékoztatóban</Link>
           </span>{" "}
           foglaltakat
         </label>
