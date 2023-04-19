@@ -34,7 +34,13 @@ export const data = {
       submitFormBtnContent: "Küldés",
       successMessage: "Űrlap sikeresen elküldve",
       errorMessage: "Az űrlap elküldése sikertelen",
-      sendingMessage:"Küldés..."
+      sendingMessage: "Küldés...",
+      acceptPrivacyContent: {
+        partOne: "Elolvastam és elfogadom az",
+        partTwo: "Adatvédelmi Nyilatkozatot.",
+      },
+      acceptPrivacyAlert:
+        "Az űrlap beküldéséhez el kell fogadnod az Adatvédelmi Nyilatkozatot.",
     },
     services: {
       heading: "Szolgáltatásaink",
@@ -48,7 +54,7 @@ export const data = {
         cardOne: {
           title: "Esküvői",
           price: "139 990",
-          currency:"Ft",
+          currency: "Ft",
           description:
             "Az Esküvői csomagot házasságra készülő pároknak ajánljuk, hogy egyszerűbben szervezhessék a nagy napjukat.",
           services: [
@@ -68,7 +74,7 @@ export const data = {
         cardTwo: {
           title: "Gasztro",
           price: "119 990",
-          currency:"Ft",
+          currency: "Ft",
           description:
             "Éttermeknek, kávézóknak és egyéb vendéglátóipari vállalkozásoknak ajánlott csomag.",
           services: [
@@ -86,7 +92,7 @@ export const data = {
         cardThree: {
           title: "Üzleti",
           price: "369 990",
-          currency:"Ft",
+          currency: "Ft",
           description:
             "Az Üzleti csomagot vállalkozásoknak kínáljuk a digitális jelenlétük fejlesztése céljából.",
           services: [
@@ -147,7 +153,13 @@ export const data = {
       submitFormBtnContent: "Submit Request",
       successMessage: "Form submitted successfully",
       errorMessage: "Form submission failed",
-      sendingMessage:"Sending..."
+      sendingMessage: "Sending...",
+      acceptPrivacyContent: {
+        partOne: "I have read and agree to the",
+        partTwo: "Privacy Policy.",
+      },
+      acceptPrivacyAlert:
+        "To submit the form, you must accept the Privacy Policy.",
     },
     services: {
       heading: "Our services",
@@ -161,7 +173,7 @@ export const data = {
         cardOne: {
           title: "Wedding",
           price: "689",
-          currency:"€",
+          currency: "€",
           description:
             "The Wedding package is recommended for couples preparing for marriage to help them easily organize their big day.",
           services: [
@@ -181,7 +193,7 @@ export const data = {
         cardTwo: {
           title: "Gastro",
           price: "689",
-          currency:"€",
+          currency: "€",
           description: "For restaurants, cafes, and other catering businesses",
           services: [
             "Custom and stylish website design (1-6 pages)",
@@ -197,7 +209,7 @@ export const data = {
         cardThree: {
           title: "Business",
           price: "889",
-          currency:"€",
+          currency: "€",
           description:
             "The Business package is offered to businesses for the development of their digital presence.",
           services: [
@@ -258,7 +270,13 @@ export const data = {
       submitFormBtnContent: "Enviar solicitud",
       successMessage: "Formulario enviado exitosamente",
       errorMessage: "Envío del formulario fallido",
-      sendingMessage:"Enviando..."
+      sendingMessage: "Enviando...",
+      acceptPrivacyContent: {
+        partOne: "He leído y acepto la",
+        partTwo: "Política de Privacidad.",
+      },
+      acceptPrivacyAlert:
+        "Para enviar el formulario, debes aceptar la Política de Privacidad.",
     },
     services: {
       heading: "Nuestros servicios",
@@ -272,7 +290,7 @@ export const data = {
         cardOne: {
           title: "Bodas",
           price: "689",
-          currency:"€",
+          currency: "€",
           description:
             "El paquete de boda está recomendado para parejas que se preparan para casarse, para ayudarles a organizar fácilmente su gran día.",
           services: [
@@ -292,7 +310,7 @@ export const data = {
         cardTwo: {
           title: "Gastro",
           price: "689",
-          currency:"€",
+          currency: "€",
           description:
             "Para restaurantes, cafeterías y otros negocios de catering",
           services: [
@@ -309,7 +327,7 @@ export const data = {
         cardThree: {
           title: "Negocios",
           price: "889",
-          currency:"€",
+          currency: "€",
           description:
             "El paquete de negocios se ofrece a las empresas para el desarrollo de su presencia digital.",
           services: [

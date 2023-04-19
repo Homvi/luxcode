@@ -8,16 +8,16 @@ const Form = ({ data, language }) => {
   const [name, setName] = useState("");
   const [sending, setSending] = useState(false);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
-  const [termsAndConditionsError, setTermsAndConditionsError] = useState(false)
+  const [termsAndConditionsError, setTermsAndConditionsError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if(!isCheckboxChecked){
-      setTermsAndConditionsError(true)
-      return
+    if (!isCheckboxChecked) {
+      setTermsAndConditionsError(true);
+      return;
     }
-    if(isCheckboxChecked){
-      setTermsAndConditionsError(false)
+    if (isCheckboxChecked) {
+      setTermsAndConditionsError(false);
     }
     setSending(true);
     // Get form data
@@ -214,12 +214,14 @@ const Form = ({ data, language }) => {
           className="block  mr-2 text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  "
           htmlFor="terms"
         >
-          Elovastam és elfogadom az{" "}
+          {data[language].requestQuote.acceptPrivacyContent.partOne}{" "}
           <span className="font-semibold">
             {" "}
-            <Link to="/privacy-policy">adatkezelési tájékoztatóban</Link>
+            <Link to="/privacy-policy">
+              {" "}
+              {data[language].requestQuote.acceptPrivacyContent.partTwo}
+            </Link>
           </span>{" "}
-          foglaltakat
         </label>
 
         {/* checkbox */}
@@ -257,24 +259,28 @@ const Form = ({ data, language }) => {
         </button>
       </div>
       <div className="flex flex-col items-center justify-center">
-
-         { termsAndConditionsError && <div className="text-red-500 thin mt-4 text-xs">Az űrlap beküldéséhez el kell fogadnod az adatkezelési tájékoztatóban foglaltakat.</div>} 
-          {messageSent && (
-            <div className=" mt-4 text-xs text-lime-300 thin">
-              {" "}
-              {data[language].requestQuote.successMessage}
-            </div>
-          )}
-          {isError && (
-            <div className=" mt-4 text-xs text-red-500 thin">
-              {data[language].requestQuote.errorMessage}
-            </div>
-          )}
-          {sending && (
-            <div className=" mt-4 text-xs text-lime-300 thin">
-              {data[language].requestQuote.sendingMessage}
-            </div>
-          )}
+        {termsAndConditionsError && (
+          <div className="text-red-500 thin mt-4 text-xs">
+            Az űrlap beküldéséhez el kell fogadnod az adatkezelési
+            tájékoztatóban foglaltakat.
+          </div>
+        )}
+        {messageSent && (
+          <div className=" mt-4 text-xs text-lime-300 thin">
+            {" "}
+            {data[language].requestQuote.successMessage}
+          </div>
+        )}
+        {isError && (
+          <div className=" mt-4 text-xs text-red-500 thin">
+            {data[language].requestQuote.errorMessage}
+          </div>
+        )}
+        {sending && (
+          <div className=" mt-4 text-xs text-lime-300 thin">
+            {data[language].requestQuote.sendingMessage}
+          </div>
+        )}
       </div>
     </form>
   );
