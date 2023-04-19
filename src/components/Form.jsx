@@ -258,7 +258,7 @@ const Form = ({ data, language }) => {
       </div>
       <div className="flex flex-col items-center justify-center">
 
-         { termsAndConditionsError && <div className="text-red-500 thin mt-4 text-xs">Az űrlap beküldéséhez el kell fogadnod a felhasználási feltételeket.</div>} 
+         { termsAndConditionsError && <div className="text-red-500 thin mt-4 text-xs">Az űrlap beküldéséhez el kell fogadnod az adatkezelési tájékoztatóban foglaltakat.</div>} 
           {messageSent && (
             <div className=" mt-4 text-xs text-lime-300 thin">
               {" "}
