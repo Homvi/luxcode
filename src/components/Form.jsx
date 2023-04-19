@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import check from "../assets/check-no-circle.svg";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,8 @@ const Form = ({ data, language }) => {
   const [isError, setIsError] = useState(false);
   const [name, setName] = useState("");
   const [sending, setSending] = useState(false);
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -50,6 +52,14 @@ const Form = ({ data, language }) => {
       setIsError(true);
     }
   };
+
+  useEffect(() => {
+    if (isCheckboxChecked && !sending) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
+  }, [isCheckboxChecked, sending]);
 
   return (
     <form className="w-full" name="quote" method="post" onSubmit={handleSubmit}>
@@ -214,21 +224,30 @@ const Form = ({ data, language }) => {
           </span>{" "}
           foglaltakat
         </label>
+
         {/* checkbox */}
-        <div className="relative flex justify-center items-center">
+        <div
+          className="relative flex justify-center items-center"
+          onClick={(e) => setIsCheckboxChecked(!isCheckboxChecked)}
+        >
           <div className="">
             <div className="h-3 w-3 border-[1px] rounded-sm cursor-pointer border-[#474138]"></div>
           </div>
           <img
             src={check}
             alt="check"
-            className="mr-1 h-[5px] left-[3px] cursor-pointer absolute"
+            className={
+              isCheckboxChecked
+                ? "mr-1 h-[5px] left-[3px] cursor-pointer absolute"
+                : "hidden"
+            }
           />
         </div>
       </div>
+
       {/* eddig */}
       <div className="w-full flex justify-center">
-        <button type="submit" disabled={sending}>
+        <button type="submit" disabled={isButtonDisabled}>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="fit p-[1px] bg-slate-50 w-fit  rounded-full bg-gradient-to-br from-[#CFBEA4]  to-[#b28647] hover:cursor-pointer transition-all  hover:from-orange-300 hover:shadow-xl">
               <div className="px-3 py-1 rounded-full bg-[#151414] w-fit ">
