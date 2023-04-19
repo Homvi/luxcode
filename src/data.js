@@ -26,6 +26,7 @@ export const data = {
           wedding: "Esküvői",
           gastro: "Gasztro",
           business: "Üzleti",
+          mandatory:"Kötelező Nyilvánosság"
         },
         purpose: "Weboldal célja",
         needs: "Elképzelések és igények",
@@ -107,6 +108,23 @@ export const data = {
             "SSL tanúsítványok és weboldal-biztonság",
           ],
         },
+        cardFour: {
+          title: "Kötelező Nyilvánosság",
+          price: "199 990",
+          currency: "Ft",
+          description:
+            "Egy professzionális weboldallal bemutathatják projektjüket és megfelelhetnek a jogszabályi előírásoknak.",
+          services: [
+            "Egyedi és stílusos weboldaldesign (1-8 oldal)",
+            "Reszponzív és mobilbarát weboldal",
+            "Domain regisztráció és webtárhely-szolgáltatások",
+            "Projektinformációk és dokumentumok közzététele",
+            "Kapcsolattartási lehetőség és közösségi média integráció",
+            "Hírek és frissítések közzététele",
+            "Gyakran Ismételt Kérdések (GYIK) szekció",
+            "SSL tanúsítványok és weboldal-biztonság",
+          ],
+        },        
       },
       requestQuoteBtnContent: "Kérjen ajánlatot most",
     },
@@ -145,6 +163,7 @@ export const data = {
           wedding: "Wedding",
           gastro: "Gastro",
           business: "Business",
+          mandatory:"Mandatory Disclosure"
         },
         purpose: "Website purpose",
         needs: "Ideas and requirements",
@@ -224,6 +243,24 @@ export const data = {
             "SSL certificates and website security",
           ],
         },
+        cardFour: {
+          title: "Mandatory Disclosure",
+          price: "199",
+          currency: "€",
+          description:
+            "This package is designed for businesses that need to comply with mandatory disclosure requirements. With a professional website, they can showcase their project and meet legal regulations.",
+          services: [
+            "Custom and stylish website design (1-8 pages)",
+            "Responsive and mobile-friendly website",
+            "Domain registration and web hosting services",
+            "Publication of project information and documents",
+            "Contact options and social media integration",
+            "News and updates posting",
+            "Frequently Asked Questions (FAQ) section",
+            "SSL certificates and website security",
+          ],
+        },
+        
       },
       requestQuoteBtnContent: "Request a quote now",
     },
@@ -262,6 +299,7 @@ export const data = {
           wedding: "Bodas",
           gastro: "Gastronómico",
           business: "Empresarial",
+          mandatory:"Divulgación Obligatoria"
         },
         purpose: "Propósito del sitio web",
         needs: "Ideas y requisitos",
@@ -342,6 +380,24 @@ export const data = {
             "Certificados SSL y seguridad del sitio web",
           ],
         },
+        cardFour: {
+          title: "Divulgación Obligatoria",
+          price: "199",
+          currency: "€",
+          description:
+            "Este paquete está diseñado para empresas que necesitan cumplir con los requisitos de divulgación obligatoria. Con un sitio web profesional, pueden mostrar su proyecto y cumplir con las regulaciones legales.",
+          services: [
+            "Diseño de sitio web personalizado y elegante (1-8 páginas)",
+            "Sitio web adaptable y compatible con dispositivos móviles",
+            "Registro de dominio y servicios de alojamiento web",
+            "Publicación de información y documentos del proyecto",
+            "Opciones de contacto e integración de redes sociales",
+            "Publicación de noticias y actualizaciones",
+            "Sección de Preguntas Frecuentes (FAQ)",
+            "Certificados SSL y seguridad del sitio web",
+          ],
+        },
+        
       },
       requestQuoteBtnContent: "Solicite un presupuesto ahora",
     },

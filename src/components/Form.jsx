@@ -151,6 +151,9 @@ const Form = ({ data, language }) => {
           <option className=" bg-[#141514]/95 " value="business">
             {data[language].requestQuote.formLabels.options.business}
           </option>
+          <option className=" bg-[#141514]/95 " value="mandatory">
+            {data[language].requestQuote.formLabels.options.mandatory}
+          </option>
         </select>
         <label
           className="block text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  mb-2"
@@ -217,7 +220,11 @@ const Form = ({ data, language }) => {
           {data[language].requestQuote.acceptPrivacyContent.partOne}{" "}
           <span className="font-semibold">
             {" "}
-            <Link  target="_blank" rel="noopener noreferrer" to="/privacy-policy">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="/privacy-policy"
+            >
               {" "}
               {data[language].requestQuote.acceptPrivacyContent.partTwo}
             </Link>

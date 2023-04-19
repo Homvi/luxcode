@@ -34,6 +34,7 @@ const Services = () => {
         <PriceCard data={data[language].services.priceCardData.cardOne} buttonContent={data[language].services.priceCardBtnContent}/>
         <PriceCard data={data[language].services.priceCardData.cardTwo} buttonContent={data[language].services.priceCardBtnContent}/>
         <PriceCard data={data[language].services.priceCardData.cardThree} buttonContent={data[language].services.priceCardBtnContent}/>
+        <PriceCard data={data[language].services.priceCardData.cardFour} buttonContent={data[language].services.priceCardBtnContent}/>
       </div>
       <div className="mb-5">
         <Description content={data[language].services.moreInfo} />
