@@ -273,7 +273,7 @@ export const data = {
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
-    subheading: "Sitios web de alta calidad, apariencia elegante - LuxCode",
+    subheading: "Sitios Web Elegantes y Auténticos - LuxCode",
     landingPage: {
       mainHeadingFirstRow: "Diseños personalizados,",
       mainHeadingSecondRow: "hermosos sitios web",
