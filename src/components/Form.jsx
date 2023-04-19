@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import check from "../assets/check-no-circle.svg";
+import { Link } from "react-router-dom";
 
 const Form = ({ data, language }) => {
   const [messageSent, setMessageSent] = useState(false);
@@ -197,6 +199,32 @@ const Form = ({ data, language }) => {
         >
           {data[language].requestQuote.formLabels.specificNeeds}
         </label>
+      </div>
+      {/* eddig */}
+      {/* Terms and conditions area */}
+      <div className="mb-4  flex items-center">
+        <label
+          className="block  mr-2 text-[10px] text-transparent thin bg-clip-text bg-gradient-to-br from-[#B8A080] to-[#DEA96B]  "
+          htmlFor="terms"
+        >
+          Elovastam és elfogadom az{" "}
+          <span className="font-semibold">
+            {" "}
+            <Link to="/terms-and-conditions">adatkezelési tájékoztatóban</Link>
+          </span>{" "}
+          foglaltakat
+        </label>
+        {/* checkbox */}
+        <div className="relative flex justify-center items-center">
+          <div className="">
+            <div className="h-3 w-3 border-[1px] rounded-sm cursor-pointer border-[#474138]"></div>
+          </div>
+          <img
+            src={check}
+            alt="check"
+            className="mr-1 h-[5px] left-[3px] cursor-pointer absolute"
+          />
+        </div>
       </div>
       {/* eddig */}
       <div className="w-full flex justify-center">
