@@ -330,7 +330,7 @@ export const data = {
           price: "689",
           currency: "€",
           description:
-            "El paquete de boda está recomendado para parejas que se preparan para casarse, para ayudarles a organizar fácilmente su gran día.",
+            "El paquete de boda está recomendado para parejas que preparan su casamiento, para ayudarles a organizar fácilmente su gran día.",
           services: [
             "Diseño de sitio web personalizado y elegante (1-6 páginas)",
             "Sitio web adaptable y compatible con dispositivos móviles",
