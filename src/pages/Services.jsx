@@ -44,7 +44,9 @@ const Services = () => {
         <Subheading content={data[language].services.featuredServices}/>
       </div>
       <div className="flex flex-col items-stretch mb-10 md:flex-row">
-        <PriceCard data={data[language].services.priceCardData.cardOne} buttonContent={data[language].services.priceCardBtnContent}/>
+        
+        <PriceCard  data={data[language].services.priceCardData.cardOne} buttonContent={data[language].services.priceCardBtnContent}/>
+       
         <PriceCard data={data[language].services.priceCardData.cardTwo} buttonContent={data[language].services.priceCardBtnContent}/>
         <PriceCard data={data[language].services.priceCardData.cardThree} buttonContent={data[language].services.priceCardBtnContent}/>
         <PriceCard data={data[language].services.priceCardData.cardFour} buttonContent={data[language].services.priceCardBtnContent}/>
