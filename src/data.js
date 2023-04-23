@@ -273,7 +273,7 @@ export const data = {
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
-    subheading: "Juntos somos más fuertes - LuxCode",
+    subheading: "En el camino hacia el éxito - LuxCode",
     landingPage: {
       mainHeadingFirstRow: "Diseños personalizados,",
       mainHeadingSecondRow: "hermosos sitios web",
