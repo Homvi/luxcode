@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Description from "../components/Description";
 import Heading from "../components/Heading";
@@ -10,18 +10,31 @@ import { Link } from "react-router-dom";
 import { data } from "../data";
 import { useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
 // eslint-disable-next-line no-unused-vars
   const [language, setLanguage] = useContext(LanguageContext);
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="inter p-8">
       <Navbar />
-      <div className="mt-12">
+      <div className="mt-12"  data-aos="fade-right"
+          data-aos-offset="1"
+          data-aos-duration="400"
+          data-aos-delay="210">
         <Subheading content={data[language].subheading} />
       </div>
-      <div className="mb-5">
+      <div className="mb-5"  data-aos="fade-right"
+          data-aos-offset="1"
+          data-aos-duration="400"
+          data-aos-delay="200">
         <Heading content={data[language].services.heading} />
       </div>
       <div className="mb-16">

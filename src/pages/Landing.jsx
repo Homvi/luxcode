@@ -12,6 +12,8 @@ import { data } from "../data";
 import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
 import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Landing = () => {
   const [imageLoading, setImageLoading] = useState(true);
@@ -36,6 +38,10 @@ const Landing = () => {
 
     return () => clearInterval(interval);
   }, [arrayIndex, progressArray, loadingIsNecessary]);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const handleLoaded = () => {
     setLoadingIsNecessary(false);
@@ -58,14 +64,38 @@ const Landing = () => {
         <div className="p-8">
           {imageLoading && <Loading progress={progress} />}
           <Navbar />
-          <div className="mt-12">
+          <div
+            className="mt-12"
+            data-aos="fade-right"
+            data-aos-offset="1"
+            data-aos-duration="400"
+            data-aos-delay="210"
+          >
             <Subheading content={data[language].subheading} />
           </div>
           <div className="mb-5">
-            <Heading content={data[language].landingPage.mainHeadingFirstRow} />
-            <Heading
-              content={data[language].landingPage.mainHeadingSecondRow}
-            />
+            <div
+              className=""
+              data-aos="fade-right"
+              data-aos-offset="1"
+              data-aos-duration="400"
+              data-aos-delay="210"
+            >
+              <Heading
+                content={data[language].landingPage.mainHeadingFirstRow}
+              />
+            </div>
+            <div
+              className=""
+              data-aos="fade-right"
+              data-aos-offset="1"
+              data-aos-duration="400"
+              data-aos-delay="210"
+            >
+              <Heading
+                content={data[language].landingPage.mainHeadingSecondRow}
+              />
+            </div>
           </div>
           <div className="mb-16">
             <Description content={data[language].intro.description} />

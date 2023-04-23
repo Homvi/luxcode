@@ -1,6 +1,6 @@
 export const data = {
   HU: {
-    subheading: "Minőségi weboldalak, elegáns megjelenés - LuxCode",
+    subheading: "A siker útján - LuxCode",
     landingPage: {
       mainHeadingFirstRow: "Egyedi tervezésű,",
       mainHeadingSecondRow: "gyönyörű weboldalak",
@@ -137,7 +137,7 @@ export const data = {
       "A LuxCode büszke arra, hogy a legjobb minőségű szolgáltatásokat nyújtja ügyfeleinek. Célunk, hogy segítsünk ügyfeleinknek erős és hatékony online jelenlétet kialakítani.",
   },
   EN: {
-    subheading: "High-quality websites, elegant appearance - LuxCode",
+    subheading: "We are here for you - LuxCode",
     landingPage: {
       mainHeadingFirstRow: "Custom-designed,",
       mainHeadingSecondRow: "beautiful websites",
@@ -273,7 +273,7 @@ export const data = {
       "LuxCode is proud to provide the highest quality services to its clients. Our goal is to help our clients establish a strong and effective online presence.",
   },
   ES: {
-    subheading: "Sitios Web Elegantes y Auténticos - LuxCode",
+    subheading: "Juntos somos más fuertes - LuxCode",
     landingPage: {
       mainHeadingFirstRow: "Diseños personalizados,",
       mainHeadingSecondRow: "hermosos sitios web",
