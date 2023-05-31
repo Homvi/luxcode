@@ -33,14 +33,15 @@ const Form = ({ data, language }) => {
     };
 
     try {
-      const response = await fetch(
-        "https://stormy-badlands-81408.herokuapp.com/submit-form",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://stormy-badlands-81408.herokuapp.com/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      
+       if (response.status !== 200) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      } 
 
       const data = await response.json();
       console.log(data);
