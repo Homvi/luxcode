@@ -19,7 +19,7 @@ export const data = {
         name: "Név",
         email: "Email",
         phone: "Telefonszám",
-        comapnyName: "Cég neve (opcionális)",
+        companyName: "Cég neve (opcionális)",
         selectFromTheOptions: "Válaszzon az ajánlatok közül",
         options: {
           custom: "Egyedi",

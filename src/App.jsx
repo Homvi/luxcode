@@ -8,7 +8,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 function App() {
   return (
     <>
-      <div className=" bg-cover svg-bcg min-h-screen relative">
+      <div className="bg-cover svg-bcg min-h-screen relative">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/services" element={<Services />} />
