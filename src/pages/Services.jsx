@@ -72,7 +72,7 @@ const Services = () => {
             />
           ))}
         </div>
-        <div className="max-w-[190px] font-normal flex text-[8px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
+        <div className="max-w-[190px] font-normal flex text-[10px] my-3  justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-[#DBCFB8]  to-[#B28647]  xl:p-4">
         {data[language].testemonialDescription}
         </div>
       </div>
