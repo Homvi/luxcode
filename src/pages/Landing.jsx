@@ -16,7 +16,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Landing = () => {
-  const [imageLoading, setImageLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
   const [language] = useContext(LanguageContext);
@@ -28,6 +28,9 @@ const Landing = () => {
     if (document.cookie.includes("visited")) {
       setLoadingIsNecessary(false);
       setImageLoading(false);
+    } else {
+      setLoadingIsNecessary(true);
+      setImageLoading(true);
     }
   }, []);
 
@@ -61,7 +64,7 @@ const Landing = () => {
     setTimeout(() => {
       setImageLoading(false);
     }, 2000);
-    
+
     //set the cookie to remember that the user has already visited the website
     //set cookie expire in 1 day
     document.cookie = "visited=true; max-age=86400";
