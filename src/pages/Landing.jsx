@@ -23,7 +23,14 @@ const Landing = () => {
 
   const [arrayIndex, setArrayIndex] = useState(0);
 
-  
+  useEffect(() => {
+    //check in the cookies if the user has already visited the website and if so, don't show the progress bar
+    if (document.cookie.includes("visited")) {
+      setLoadingIsNecessary(false);
+      setImageLoading(false);
+    }
+  }, []);
+
   //set the progress bar
   useEffect(() => {
     //control the speed of the progress bar
@@ -54,6 +61,10 @@ const Landing = () => {
     setTimeout(() => {
       setImageLoading(false);
     }, 2000);
+    
+    //set the cookie to remember that the user has already visited the website
+    //set cookie expire in 1 day
+    document.cookie = "visited=true; max-age=86400";
   };
 
   return (
