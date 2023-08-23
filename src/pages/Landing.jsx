@@ -19,14 +19,16 @@ const Landing = () => {
   const [imageLoading, setImageLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingIsNecessary, setLoadingIsNecessary] = useState(true);
-  // eslint-disable-next-line no-unused-vars
-  const [language, setLanguage] = useContext(LanguageContext);
+  const [language] = useContext(LanguageContext);
 
   const [arrayIndex, setArrayIndex] = useState(0);
-  // eslint-disable-next-line no-unused-vars
-  const [progressArray, setProgressArray] = useState([0, 81, 87, 90]);
 
+  
+  //set the progress bar
   useEffect(() => {
+    //control the speed of the progress bar
+    const progressArray = [0, 81, 87, 90];
+
     const interval = setInterval(() => {
       if (arrayIndex < progressArray.length && loadingIsNecessary) {
         setProgress(progressArray[arrayIndex]);
@@ -37,12 +39,15 @@ const Landing = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [arrayIndex, progressArray, loadingIsNecessary]);
+  }, [arrayIndex, loadingIsNecessary]);
+
+  //initialize AOS
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
+  //handle the image loading
   const handleLoaded = () => {
     setLoadingIsNecessary(false);
     setProgress(100);
