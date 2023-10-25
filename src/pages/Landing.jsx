@@ -7,7 +7,7 @@ import Subheading from "../components/Subheading";
 import TestemonialCard from "../components/TestemonialCard";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
-import pc from "../assets/pc.png";
+import pc from "../assets/pc.webp";
 import { data } from "../data";
 import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
