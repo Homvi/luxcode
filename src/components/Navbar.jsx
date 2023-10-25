@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <div className="flex justify-between  relative">
         <Link to="/">
-          <img className="h-8 mb-5" src={luxCodeLogo} alt="LuxCode" />
+          <img className="h-8 w-auto mb-5" src={luxCodeLogo} alt="LuxCode" />
         </Link>
         <div className="flex flex-col justify-center items-center">
           <div
