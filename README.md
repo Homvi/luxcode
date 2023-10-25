@@ -2,6 +2,12 @@
 
 This is a web-based application built using React.js, offering a sleek user interface and responsive design. Crafted with best practices in mind, it provides a robust starting point for any web development project or prototype.
 
+## Live Demo
+
+The live version of the project is hosted on Netlify and can be accessed at [https://luxcode.dev/](https://luxcode.dev/).
+
+![Luxcode Preview](src/assets/luxcode.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -25,7 +31,6 @@ To contribute to this project:
 ### Running the App
 
 After installing the dependencies, you can run the app in development mode:
-
 
 This will start the development server, and the app should open in your default web browser. If not, you can manually navigate to `http://localhost:3000/` to view the app.
 
