@@ -34,7 +34,7 @@ const Form = ({ data, language }) => {
 
     try {
       const response = await fetch(
-        "https://stormy-badlands-81408.herokuapp.com/submit-form",
+        "https://portfolio-2-0-backend-email.onrender.com/luxcode-form",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
